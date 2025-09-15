@@ -1,0 +1,271 @@
+
+:root {
+    --link-color: #0a4708;
+    
+    --background-color: #f5f5f5;
+    --text-color: #060606;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Navigasi gimank */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 50px;
+    height: 80px;
+}
+
+nav .left a {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 15px;
+}
+
+nav .right a:last-child{
+    background-color: var(--text-color);
+    color:var(--background-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span{
+    margin-left: 5px;
+}
+
+/* Bagian 1, profil */
+#Profil { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.teks {
+    flex: 5;
+}
+
+
+.teks h2 {
+    font-size: 45px;
+}
+
+.teks .links {
+    margin-top: 25px;
+}
+
+.teks .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.teks .links a:hover {
+    background-color: var(--link-color);
+    color: var(--background-color);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.foto {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.foto img {
+    width: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border:#060606 4px ridge;
+    transition: transform 0.5s ease;
+}
+
+.foto img:hover {
+    transform: rotatex(5deg) rotateY(5deg) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}  
+
+/* Bagian 2, skill */
+#skill {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+#skill h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#skill .teks {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+
+    padding: 10px 10px;
+    margin: 10px;
+    width: 130px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+    gap: 10px;
+}
+
+.cells .cell:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.cells .cell span {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Bagian 3, proyek */
+#proyek {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}   
+
+#proyek h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 70px;
+}
+
+#proyek .teks {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+
+    background: linear-gradient(to right, #0a4708, #32cd32, #f5f5f5, #0a4708);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 3s linear infinite;
+
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+@keyframes animate-gradient {
+    to {
+        background-position: 200%;
+    }
+}
+
+
+@media (max-width: 8000px) {
+    /* Bagian 1,, profil */
+    .teks h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 748px) {
+    #Profil {
+        flex-direction: column-reverse;
+    }
+
+    .foto {
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .foto img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 708px) {
+    /* Navigasi gimank */
+    nav {
+        padding: 0 50px;
+    }
+
+    nav .right a {
+        font-size: 20px;
+    }
+
+    nav .right a:last-child{
+    background-color: transparent;
+    color:var(--text-color);
+    padding: 0px;
+    }
+
+    nav .right a span {
+        display: none;
+    }
+
+    /* Bagian 1, profil */
+    #Profil {
+        padding: 0 20px;
+    }
+
+    .teks h2 {
+        font-size: 25px;
+    }
+
+    /* Bagian 2, skill */
+
+    #skill {
+        padding: 0 20px;
+    }
+
+    .cells .cell span {
+        font-size: 16px;
+    }
+}
