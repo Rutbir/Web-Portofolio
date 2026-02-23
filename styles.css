@@ -269,3 +269,43 @@ nav .right a span{
         font-size: 16px;
     }
 }
+
+@media screen and (max-width: 480px) {
+    /* Navigasi gimank */
+    nav {
+        padding: 0 20px;
+    }
+
+    nav .left a {
+        font-size: 20px;
+    }
+
+    nav .right a {
+        font-size: 16px;
+    }
+
+    /* Bagian 1, profil */
+    #Profil {
+        padding: 0 20px;
+    }
+
+    .teks h2 {
+        font-size: 20px;
+    }
+
+     /* Bagian 2, skill */
+
+     #skill {
+        padding: 0 20px;
+    }
+
+     .cells .cell {
+        width: 100px;
+        padding: 5px;
+     }
+
+     .cells .cell span {
+        font-size: 14px;
+     }
+    
+}
