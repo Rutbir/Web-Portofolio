@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,106 +23,106 @@
   <link rel="stylesheet" href="styles.css" />
 
   <body>
-    <!-- Navigasi gimank -->
-    <nav>
-      <div class="left">
-        <a href="#">Muhammad Naufal Razan</a>
-      </div>
+    
+    <!-- Top Bar -->
+    
+    <header class="topbar">
 
-      <div class="right">
-        <a
-          href="https://github.com/Rutbir"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-github"></i>
-          <span>Github</span>
-        </a>
+      <button class="icon-btn theme-btn" data-theme-btn>
+        <span class="material symbols-outlined dark" aria-hidden="true">dark_mode</span>
+        <span class="material symbols-outlined light" aria-hidden="true">light_mode</span>
 
-        <a
-          href="mailto:mnrstiunj@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-solid fa-envelope"></i>
-          <span>Email</span>
-        </a>
-      </div>
-    </nav>
+        <div class="state-layer"></div>
+      </button>
+    </header>
 
     <main>
-      <!-- Bagian 1, profil -->
-      <section id="Profil">
-        <div class="teks">
-          <h2>Salam Kenal</h2>
-          <p>
-            Hi, I'm Muhammad Naufal Razan,
-            Information Systems and Technology Student in Jakarta State University (Universitas Negeri Jakata).
-            I’m passionate about Cybersecurity and driven to continuously learn new technologies while enhancing my skills in this ever-evolving field.
+      <article>
 
-          </p>
-          <div class="links">
-            <a href="#skill">
-              <i class="fa-solid fa-code"></i>
-              <span>Skills</span>
-            </a>
+        <!-- hero section -->
+        <section class="hero">
+          <div class="container">
 
-            <a href="#proyek">
-              <i class="fa-solid fa-sheet-plastic"></i>
-              <span>Project</span>
-            </a>
+            <figure class="hero-img" style="--width: 240; --height: 240;">
+              <img src="image/hero.jpg" width="240" height="240"` alt="mnr" class="img-cover">
+            </figure>
 
-            <a href="#letsconnect">
-              <i class="fa-solid fa-handshake"></i>
-              <span>Let's Connect</span>
-          </div>  
+            <div class="hero-content">
+              <span class="label-large">Cybersecurity Enthusiast</span>
+
+              <h1 class="display-small">Muhammad Naufal Razan</h1>
+
+              <p class="body-large section-text">lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              
+              <div class="btn-wrapper">
+                <a href="com" class="chip">
+
+                  <span class="material-symbols-outlined" aria-hidden="true">email</span>
+                  
+                  <span class="label-medium">mnrstiunj@gmail.com</span>
+
+                  <div class="state-layer"></div>
+                </a>
+
+                <a href="telp" class="chip">
+
+                  <span class="material-symbols-outlined" aria-hidden="true">phone</span>
+
+                  <span class="label-medium">+62 123 456 7890</span>
+
+                  <div class="state-layer"></div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+
+        <!-- main content -->
+        <div class="article">
+
+          <div class="about-card">
+            <h2 class="card-title title-medium">About Me</h2>
+
+            <p class="card-text">I am a passionate cybersecurity enthusiast with a strong foundation in computer science and information security. I enjoy staying up-to-date with the latest trends and technologies in the field and am always eager to learn and grow as a professional. 
+            </p>
+
+            <ul class="about-list"> 
+
+              <li class="list-item">
+
+                <span class="material-symbols-outlined" aria-hidden="true">school</span>
+                <span class="label-medium">Bachelor's Degree in Computer Science</span>
+                
+              </li>
+
+              <li class="list-item">
+
+                <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                <span class="label-medium">Depok, Indonesia</span>
+                
+              </li>
+
+              <li class="list-item">
+
+                <span class="material-symbols-outlined" aria-hidden="true">Github</span>
+                <a href="https://github.com/mnrstiunj" class="label-medium">My GitHub Profile</a>
+
+              </li>
+
+            </ul>
+
+          </div>
+
         </div>
 
-         <div class="foto"> 
-            <img src="image/IMG-20240426-WA000021.jpg" alt="Foto Profil" width="300"> 
-          </div>  
-      </section>
-
-      <!-- Bagian 2, skill -->
-      <section id="skill">
-        <h2>Skills</h2>
-
-        <div class="cells">
-          <div class="cell">
-            <i class="fa-brands fa-linux"></i>
-            <span>Linux</span>
-          </div>
-
-          <div class="cell">
-            <i class="fa-brands fa-nmap"></i>
-            <span>Nmap</span>
-          </div>
-
-          <div class="cell">
-            <i class="fa-brands fa-python"></i>
-            <span>Python</span>
-          </div>
-
-          <div class="cell">
-            <i class="fa-brands fa-wireshark"></i>
-            <span>Wireshark</span>
-          </div>
-
-          <div class="cell">
-            <i class="fa-brands fa-grafana"></i>
-            <span>Grafana</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Bagian 3, proyek -->
-      <section id="proyek">
-        <h2>Project</h2>
-        <div class="teks">
-          <span>Coming soon...</span>
-        </div>
-      </section>
+      </article>
     </main>
+
+
     <script src="script.js"></script>
   </body>
 </html>
+
