@@ -16,3 +16,25 @@ const changeTheme = () => {
 }
 
 $themeBtn.addEventListener('click', changeTheme);
+
+// tab
+
+const /* node list */ $tabBtn = document.querySelectorAll('[data-tab-btn]');
+let /* node element */ [lastActiveTab] = document.querySelectorAll('[data-tab-content]');
+let /* node element */ [lastActiveTabBtn] = $tabBtn;
+
+$tabBtn.forEach((btn) => {
+    btn.addEventListener('click', function () {
+        
+        lastActiveTabBtn.classList.remove('active');
+        lastActiveTab.classList.remove('active');
+
+        const /* node element */ $tabContent = document.querySelector(`[data-tab-content="${item.dataset.tabBtn}"]`);
+        $tabContent.classList.add('active');
+        this.classList.add('active');
+
+        lastActiveTab = $tabContent;
+        lastActiveTabBtn = this;
+        
+    });
+});
