@@ -11,30 +11,36 @@ if (sessionStorage.getItem('theme')) {
 }
 
 const changeTheme = () => {
-    $HTML.dataset.theme = sessionStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+    $HTML.dataset.theme =
+        $HTML.dataset.theme === 'dark' ? 'light' : 'dark';
+
     sessionStorage.setItem('theme', $HTML.dataset.theme);
-}
+};
 
 $themeBtn.addEventListener('click', changeTheme);
 
-// tab
+/// tab
 
-const /* node list */ $tabBtn = document.querySelectorAll('[data-tab-btn]');
-let /* node element */ [lastActiveTab] = document.querySelectorAll('[data-tab-content]');
-let /* node element */ [lastActiveTabBtn] = $tabBtn;
+const $tabBtn = document.querySelectorAll('[data-tab-btn]');
+let lastActiveTab = document.querySelector('[data-tab-content].active');
+let lastActiveTabBtn = document.querySelector('[data-tab-btn].active');
 
 $tabBtn.forEach((btn) => {
     btn.addEventListener('click', function () {
-        
-        lastActiveTabBtn.classList.remove('active');
-        lastActiveTab.classList.remove('active');
+        const tabName = this.dataset.tabBtn.toLowerCase();
+        const $tabContent = document.querySelector(
+            `[data-tab-content="${tabName}"]`
+        );
 
-        const /* node element */ $tabContent = document.querySelector(`[data-tab-content="${item.dataset.tabBtn}"]`);
+        if (!$tabContent) return;
+
+        lastActiveTabBtn?.classList.remove('active');
+        lastActiveTab?.classList.remove('active');
+
         $tabContent.classList.add('active');
         this.classList.add('active');
 
         lastActiveTab = $tabContent;
         lastActiveTabBtn = this;
-        
     });
 });

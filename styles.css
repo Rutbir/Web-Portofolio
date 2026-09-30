@@ -498,9 +498,14 @@ body {
     overflow: hidden;
 }
 
-[data-theme="dark"] .theme-btn .dark
+[data-theme="dark"] .theme-btn .dark,
 [data-theme="light"] .theme-btn .light {
     display: none;
+}
+
+[data-theme="dark"] .theme-btn .light,
+[data-theme="light"] .theme-btn .dark {
+    display: block;
 }
 
 /* hero section  */
@@ -700,12 +705,12 @@ body {
         align-items: flex-start;
     }
 
-    .about-card, .primary-tabs {
+    .about-card, .primary-tab {
         position: sticky;
         top: 64px;
     }
 
-    .primary-tabs {
+    .primary-tab {
         z-index: 2;
     }
 
